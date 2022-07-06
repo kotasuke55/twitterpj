@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $items = Person::all();
+        $items = User::all();
         return response()->json([
             'data' => $items
         ],200);
@@ -28,7 +28,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $items=Person::create($request->all());
+        $items=User::create($request->all());
         return response()->json([
             'data' => $items
         ],201);
