@@ -5,20 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Person extends Model
+class Post extends Model
 {
     use HasFactory;
 
-     protected $guarded = array('id');
-
+    protected $guarded = array('id');
     public static $rules = array(
-        'name' => 'required | max:20',
-        'email' => 'required | email',
-        'password' => 'required | min:6'
+        'person_id' => 'required',
+        'text' => 'required | max:120'
     );
 
-    public function posts(){
-        return $this->hasMany('App\Models\Post');
+    public function person(){
+        return $this->belongsTo('App\Models\Person');
     }
 
     public function hearts(){

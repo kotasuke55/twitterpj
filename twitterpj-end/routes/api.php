@@ -3,6 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\HeartController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +21,8 @@ use App\Http\Controllers\PersonController;
 Route::apiResource('/person',PersonController::class)->only([
     'store','index'
 ]);
+Route::apiResource('/post',PostController::class);
+Route::apiResource('/heart',HeartController::class);
+Route::apiResource('/comment',CommentController::class);
+
+
