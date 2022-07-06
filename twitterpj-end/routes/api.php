@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PersonController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\HeartController;
 use App\Http\Controllers\CommentController;
@@ -18,7 +18,7 @@ use App\Http\Controllers\CommentController;
 |
 */
 
-Route::apiResource('/person',PersonController::class)->only([
+Route::apiResource('/user',UserController::class)->only([
     'store','index'
 ]);
 Route::apiResource('/post',PostController::class);

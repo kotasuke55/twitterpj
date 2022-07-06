@@ -15,8 +15,8 @@ class CreateHeartsTabale extends Migration
     {
         Schema::create('hearts_tabale', function (Blueprint $table) {
             $table->id();
-            $table->integer('person_id');
-            $table->integer('post_id');
+            $table->bigInteger('person_id');
+            $table->bigInteger('post_id');
             $table->timestamp('created_at')->userCurrent()->nullable();
             $table->timestamp('updated_at')->userCurrent()->nullable();
         });

@@ -15,8 +15,8 @@ class Heart extends Model
         'post_id' => 'required'
     );
 
-    public function person(){
-        return $this->belongsTo('App\Models\Person');
+    public function user(){
+        return $this->belongsTo('App\Models\User');
     }
 
     public function post(){

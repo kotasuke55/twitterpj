@@ -15,8 +15,8 @@ class Post extends Model
         'text' => 'required | max:120'
     );
 
-    public function person(){
-        return $this->belongsTo('App\Models\Person');
+    public function user(){
+        return $this->belongsTo('App\Models\user');
     }
 
     public function hearts(){
