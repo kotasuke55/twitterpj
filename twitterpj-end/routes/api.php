@@ -21,7 +21,9 @@ use App\Http\Controllers\CommentController;
 Route::apiResource('/user',UserController::class)->only([
     'store','index'
 ]);
-Route::apiResource('/post',PostController::class);
+Route::apiResource('/post',PostController::class)->only([
+    'store','index','destroy'
+]);
 Route::apiResource('/heart',HeartController::class);
 Route::apiResource('/comment',CommentController::class);
 
