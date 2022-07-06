@@ -28,7 +28,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $iuserdata=User::create($request->all());
+        $userdata=User::create($request->all());
         return response()->json([
             'userdata' => $userdata
         ],201);

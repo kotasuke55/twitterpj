@@ -14,7 +14,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $content = Post::all();
+        return response()->json([
+            'content' => $content
+        ],200);
     }
 
     /**
@@ -25,7 +28,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $content = Post::create($request->all());
+        return response()->json([
+            'content' => $content
+        ],201);
     }
 
     /**
